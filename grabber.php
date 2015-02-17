@@ -59,3 +59,4 @@ function grabber_loader()
 
     Grabber_AutoLoader::spl_register($dir);
 }
+
