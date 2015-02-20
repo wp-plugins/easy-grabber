@@ -54,6 +54,7 @@ class Grabber_Core_Config {
 		'queue_table'				 => 'grabber_queue',
 		'thread_table'				 => 'grabber_thread',
 		'css_path'					 => 'resources/css/',
+		'css_url'					 => 'resources/css/',
 		'js_path'					 => 'resources/js/',
 		'img_path'					 => 'resources/img/',
 		'js_url'					 => 'resources/js/',
@@ -106,6 +107,7 @@ class Grabber_Core_Config {
 	 * @return mixed
 	 */
 	public function __get( $k ) {
+
 		if ( !isset( $this->config[ $k ] ) && isset( $this->defaults[ $k ] ) ) {
 			$this->config[ $k ] = $this->defaults[ $k ];
 		}
@@ -128,6 +130,7 @@ class Grabber_Core_Config {
 	 * @return string
 	 */
 	public function __set( $k, $v ) {
+		
 		$this->config[ $k ] = $v;
 
 		return $this->config[ $k ];
@@ -148,11 +151,13 @@ class Grabber_Core_Config {
 			$file_data = spyc_load_file( GRABBER_DIR . self::config_default );
 
 			if ( isset( $file_data[ 'labels' ] ) && is_array( $file_data[ 'labels' ] ) ) {
-				$this->defaults = $file_data[ 'labels' ];
+				foreach( $file_data[ 'labels' ] as $k => $v )
+					Grabber_Core_Config::$labels[$k] = $v;
 			}
 
 			if ( isset( $file_data[ 'defaults' ] ) && is_array( $file_data[ 'defaults' ] ) ) {
-				$this->defaults = $file_data[ 'defaults' ];
+				foreach ( $file_data[ 'defaults' ] as $k => $v )
+					$this->defaults[ $k ] = $v;
 			}
 		}
 

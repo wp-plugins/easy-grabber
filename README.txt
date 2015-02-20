@@ -56,6 +56,4 @@ or
 
 == Changelog ==
 
-https://github.com/AlexTsumarov/easy-grabber/releases
-
 == Upgrade Notice ==

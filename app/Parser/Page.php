@@ -351,14 +351,14 @@ class Grabber_Parser_Page extends Grabber_Parser_Abstract {
 		
 		$attached = '';
 		
-		foreach ( $this->parsed[ 'files-css' ] as $src ) {
+		foreach ( $this->parsed[ 'files-js' ] as $src ) {
 			
 			$attached .= "";
 		}
 
 		foreach ( $this->parsed[ 'files-css' ] as $src ) {
 			
-			$attached .= "<link rel='stylesheet' type='text/css' href='$src' />\n";
+			$attached .= "<link rel='stylesheet' type='text/css' href='".$src."' />\n";
 		}
 		
 		$this->parsed[ 'content' ] = $attached . $this->parsed[ 'content' ];
