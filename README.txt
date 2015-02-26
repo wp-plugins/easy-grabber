@@ -1,9 +1,9 @@
-=== EASY GRABBER ===
+=== Import by URL ===
 Contributors: AlexTsumarov
-Tags: grabber, auto poster, auto publisher, autoblog, autoposter, grabber, parser, parser html, plugin, Post, posts
+Tags: import, grabber, auto poster, auto publisher, autoblog, autoposter, grabber, parser, parser html, plugin, Post, posts
 Requires at least: 3.0
 Tested up to: 4.0.0
-Stable tag: 0.0.14
+Stable tag: 0.0.15
 License: MIT
 License URI: http://opensource.org/licenses/MIT
 
@@ -13,7 +13,7 @@ A websites grabber for WordPress
 
 <img src='https://travis-ci.org/AlexTsumarov/easy-grabber.svg'>
 
-Allows you to grab a World Wide Web site from the Internet to a WordPress posts and categories, 
+Allows you to import website pages from the Internet into yours WordPress as a posts and categories, 
 recursively creating directories, getting HTML, images, and other files from the server and implements it into your post. 
 
 Core features:
